@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "firebase": "^11.6.0"
+  },
+  "name": "blood-donor-seeker-system",
+  "version": "1.0.0",
+  "main": "firebase-config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

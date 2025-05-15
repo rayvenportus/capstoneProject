@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+:root {
+  --primaryColor: hsl(213, 28%, 17%);
+  --primaryColor2: hwb(213 18% 68%);
+  --primaryColor3: hsl(212, 29%, 90%);
+  --white: hsl(0, 0%, 100%);
+  --lightestGray: hsl(0, 0%, 96%);
+  --accentColor: #9db0c8;
+  --ff: "Arimo", sans-serif;
+  --p: 1rem/1.5em var(--ff);
+  --h1: 600 3rem/1.2em var(--ff);
+  --h2: 500 2rem/1.2em var(--ff);
+  --h3: 500 22px var(--ff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  display: flex;
+  height: 100vh;
+  background-color: var(--lightestGray);
+}
+
+.sidebar {
+  background-color: var(--primaryColor);
+  color: var(--lightestGray);
+  width: 250px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font: var(--h3);
+  cursor: pointer;
+  color: var(--lightestGray);
+  text-decoration: none;
+  transition: background-color 0.2s;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.nav-item:hover {
+  background-color: var(--primaryColor2);
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 60px;
+  background-color: var(--lightestGray);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font: var(--h2);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: var(--lightestGray);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.section {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    z-index: 999;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/Styles/adminDashboard.css" />
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <div class="logo"><img src="/assets/lightLogo.png" alt="logo"></div>
+      <div class="nav-item" data-section="account-verification"><img src="/assets/adminDashboard/user-round-check.svg">Account Verification</div>
+      <div class="nav-item" data-section="donors"><img src="/assets/adminDashboard/hand-heart.svg">Donors</div>
+      <div class="nav-item" data-section="seekers"><img src="/assets/adminDashboard/user-round-search.svg">Seekers Requests</div>
+      <div class="nav-item" data-section="pickups"><img src="/assets/adminDashboard/briefcase-medical.svg">Pickups</div>
+      <div class="nav-item" data-section="donation-status"><img src="/assets/adminDashboard/shield-check.svg">Donation Status</div>
+      <div class="nav-item" data-section="settings"><img src="/assets/adminDashboard/wrench.svg">Settings</div>
+      <div class="nav-item" data-section="signout"><img src="/assets/adminDashboard/log-out.svg">Sign Out</div>
+    </div>
+  
+    <div class="main">
+      <div class="topbar">
+        <span class="menu-toggle" onclick="toggleSidebar()">☰</span>
+        <span id="section-title"> Account Verification</span>
+      </div>
+      <div class="content">
+        <div id="account-verification" class=""></div>
+        <div id="donors" class="section" style="display: none;"></div>
+        <div id="seekers" class="section" style="display: none;"></div>
+        <div id="pickups" class="section" style="display: none;"></div>
+        <div id="donation-status" class="section" style="display: none;"></div>
+        <div id="settings" class="section" style="display: none;"></div>
+        <div id="signout" class="section" style="display: none;"></div>
+
+      </div>
+    </div>
+<script src="/Scripts/adminDashboard.js"></script>  
+</html>
